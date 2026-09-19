@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Para mi amor</title>
+
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+
+            background: linear-gradient(
+                135deg,
+                #9fc5e8,
+                #c9b6e4,
+                #f2c6df
+            );
+
+            font-family: Arial, sans-serif;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            overflow: hidden;
+        }
+
+
+        /* INICIO */
+
+        .inicio {
+            text-align: center;
+        }
+
+        .inicio h1 {
+            color: #000000;
+            font-size: 30px;
+        }
+
+        .inicio p {
+            color: #000000;
+            font-size: 18px;
+        }
+
+
+        /* CORAZÓN */
+
+        .corazon {
+            font-size: 110px;
+            cursor: pointer;
+            animation: latido 1.2s infinite;
+        }
+
+        @keyframes latido {
+
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.15);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+
+        }
+
+
+        /* FOTO Y CARTA */
+
+        .contenido {
+
+            display: none;
+
+            width: 90%;
+            max-width: 1000px;
+
+            align-items: center;
+            justify-content: center;
+
+            gap: 40px;
+
+            animation: aparecer 1.5s ease;
+        }
+
+
+        /* FOTO */
+
+        .foto {
+
+            width: 400px;
+            height: 500px;
+
+            object-fit: cover;
+
+            border-radius: 20px;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.35);
+
+            border: 5px solid rgba(255, 255, 255, 0.7);
+        }
+
+
+        /* CARTA */
+
+        .carta {
+
+            background: linear-gradient(
+                135deg,
+                #f0dcff,
+                #e3c8f2
+            );
+
+            width: 430px;
+
+            padding: 30px;
+
+            /* ESQUINAS MÁS REDONDEADAS */
+            border-radius: 40px;
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.30);
+
+            text-align: center;
+
+            border: 3px solid rgba(255, 255, 255, 0.7);
+        }
+
+
+        /* TÍTULO */
+
+        .carta h2 {
+
+            color: #000000;
+
+            font-size: 30px;
+
+            margin-top: 5px;
+        }
+
+
+        /* TEXTO */
+
+        .carta p {
+
+            color: #000000;
+
+            line-height: 1.6;
+
+            font-size: 17px;
+        }
+
+
+        /* FECHA */
+
+        .fecha {
+
+            color: #000000 !important;
+
+            font-weight: bold;
+
+            font-size: 18px !important;
+
+            margin-top: 20px;
+        }
+
+
+        /* FIRMA */
+
+        .firma {
+
+            color: #000000 !important;
+
+            font-weight: bold;
+
+            font-size: 19px !important;
+        }
+
+
+        /* ANIMACIÓN DE LA CARTA */
+
+        @keyframes aparecer {
+
+            from {
+
+                opacity: 0;
+
+                transform: scale(0.7);
+
+            }
+
+            to {
+
+                opacity: 1;
+
+                transform: scale(1);
+
+            }
+
+        }
+
+
+        /* CORAZONES FLOTANTES */
+
+        .corazon-flotante {
+
+            position: absolute;
+
+            color: #8e44ad;
+
+            font-size: 25px;
+
+            animation:
+                flotar 6s linear infinite;
+
+            bottom: -50px;
+        }
+
+
+        @keyframes flotar {
+
+            0% {
+
+                transform: translateY(0);
+
+                opacity: 1;
+
+            }
+
+            100% {
+
+                transform: translateY(-110vh);
+
+                opacity: 0;
+
+            }
+
+        }
+
+
+        /* PARA CELULAR */
+
+        @media (max-width: 800px) {
+
+            .contenido {
+
+                flex-direction: column;
+
+                gap: 15px;
+
+                overflow-y: auto;
+
+                max-height: 95vh;
+            }
+
+
+            .foto {
+
+                width: 260px;
+
+                height: 300px;
+            }
+
+
+            .carta {
+
+                width: 80%;
+
+                padding: 20px;
+
+                border-radius: 35px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- INICIO -->
+
+    <div class="inicio" id="inicio">
+
+        <h1>Tengo algo para ti...</h1>
+
+        <div
+            class="corazon"
+            onclick="abrirCarta()">
+
+            &#10084;
+
+        </div>
+
+        <p>Toca aqui</p>
+
+    </div>
+
+
+
+    <!-- FOTO Y CARTA -->
+
+    <div
+        class="contenido"
+        id="contenido">
+
+
+        <!-- FOTO -->
+
+        <img
+            src="foto.jpg"
+            class="foto"
+            alt="Nuestra foto">
+
+
+
+        <!-- CARTA -->
+
+        <div class="carta">
+
+            <h2>
+                Para ti mi Amor
+            </h2>
+
+
+            <p>
+
+                Mi amor, hoy cumplimos un mes mas juntos
+                y no puedo evitar sonreir al pensar en todo
+                lo que hemos vivido.
+
+            </p>
+
+
+            <p>
+
+                Gracias por cada momento, cada risa,
+                cada detalle y por todo el amor que me das.
+                Tenerte en mi vida es algo que valoro
+                muchisimo.
+
+            </p>
+
+
+            <p>
+
+                Quiero que sepas que siempre voy a estar
+                para apoyarte y aplaudir cada uno de tus logros,
+                porque verte feliz tambien me hace feliz a mi.
+
+            </p>
+
+
+            <p>
+
+                Espero que sigamos sumando muchos meses mas,
+                muchos recuerdos y muchisimas sonrisas juntos.
+
+            </p>
+
+
+            <p class="fecha">
+
+                G &nbsp;&nbsp; 19/09/26 &nbsp;&nbsp; P
+
+            </p>
+
+
+            <p class="firma">
+
+                Te quiero muchisimo, mi vida.
+                <br>
+
+                Feliz otro mes juntos, mi amor.
+
+                <br><br>
+
+                Patsy.....
+
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <script>
+
+
+        /* ABRIR LA CARTA */
+
+        function abrirCarta() {
+
+            document.getElementById("inicio").style.display = "none";
+
+            document.getElementById("contenido").style.display = "flex";
+
+        }
+
+
+
+        /* CREAR CORAZONES */
+
+        function crearCorazon() {
+
+            const corazon =
+                document.createElement("div");
+
+
+            corazon.className =
+                "corazon-flotante";
+
+
+            corazon.innerHTML =
+                "&#10084;";
+
+
+            corazon.style.left =
+                Math.random() * 100 + "vw";
+
+
+            corazon.style.animationDuration =
+                (4 + Math.random() * 4) + "s";
+
+
+            document.body.appendChild(corazon);
+
+
+            setTimeout(() => {
+
+                corazon.remove();
+
+            }, 8000);
+
+        }
+
+
+        setInterval(
+            crearCorazon,
+            700
+        );
+
+
+    </script>
+
+
+</body>
+</html>
